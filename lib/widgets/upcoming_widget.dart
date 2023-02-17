@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:movieapi_flutter/controller/upcoming_controller.dart';
+import 'package:movie_app_flutter/controller/upcoming_controller.dart';
 
 class Upcoming extends StatefulWidget {
   const Upcoming({Key? key}) : super(key: key);
@@ -48,6 +48,7 @@ class _UpcomingState extends State<Upcoming> {
                   child: CircularProgressIndicator(),
                 );
               }
-            }));
+            })
+    );
   }
 }

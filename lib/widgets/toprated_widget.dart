@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:movieapi_flutter/controller/toprated_controller.dart';
+import 'package:movie_app_flutter/controller/toprated_controller.dart';
 
 class TopRated extends StatefulWidget {
   const TopRated({Key? key}) : super(key: key);
@@ -48,6 +48,7 @@ class _TopRatedState extends State<TopRated> {
                   child: CircularProgressIndicator(),
                 );
               }
-            }));
+            })
+    );
   }
 }

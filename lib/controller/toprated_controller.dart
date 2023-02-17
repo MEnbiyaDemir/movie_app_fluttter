@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:get/get.dart';
-import 'package:movieapi_flutter/models/toprated_model.dart';
+import 'package:movie_app_flutter/models/toprated_model.dart';
 
 class TopratedController extends GetxController {
   var playingList = <Toprated>[].obs;

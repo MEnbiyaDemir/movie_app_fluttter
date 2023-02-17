@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:movieapi_flutter/controller/search_controller.dart';
-import 'package:movieapi_flutter/widgets/moviecard_widget.dart';
+import 'package:movie_app_flutter/controller/search_controller.dart';
+import 'package:movie_app_flutter/widgets/moviecard_widget.dart';
 
 class SearchList extends StatefulWidget {
   const SearchList({Key? key}) : super(key: key);

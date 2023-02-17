@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:movieapi_flutter/style/styles.dart';
-import 'package:movieapi_flutter/widgets/bottombar_widget.dart';
-import 'package:movieapi_flutter/widgets/upcoming_widget.dart';
-import 'package:movieapi_flutter/widgets/nowplaying_widget.dart';
-import 'package:movieapi_flutter/widgets/toprated_widget.dart';
+import 'package:movie_app_flutter/style/styles.dart';
+import 'package:movie_app_flutter/widgets/bottombar_widget.dart';
+import 'package:movie_app_flutter/widgets/upcoming_widget.dart';
+import 'package:movie_app_flutter/widgets/nowplaying_widget.dart';
+import 'package:movie_app_flutter/widgets/toprated_widget.dart';
 import 'package:get/get.dart';
 
 class HomePage extends StatelessWidget {

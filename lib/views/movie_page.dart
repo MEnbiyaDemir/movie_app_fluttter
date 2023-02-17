@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:movieapi_flutter/controller/search_controller.dart';
-import 'package:movieapi_flutter/widgets/bottombar_widget.dart';
-import 'package:movieapi_flutter/widgets/moviecard_widget.dart';
+import 'package:movie_app_flutter/controller/search_controller.dart';
+import 'package:movie_app_flutter/widgets/bottombar_widget.dart';
+import 'package:movie_app_flutter/widgets/moviecard_widget.dart';
 import 'package:get/get.dart';
 
 class MoviePage extends StatelessWidget {

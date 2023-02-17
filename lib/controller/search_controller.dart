@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:flutter/widgets.dart';
 import 'package:http/http.dart' as http;
 import 'package:get/get.dart';
-import 'package:movieapi_flutter/models/search_model.dart';
+import 'package:movie_app_flutter/models/search_model.dart';
 
 class SearchController extends GetxController {
   final textController = TextEditingController();

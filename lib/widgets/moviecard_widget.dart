@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:movieapi_flutter/controller/search_controller.dart';
-import 'package:movieapi_flutter/views/movie_page.dart';
+import 'package:movie_app_flutter/controller/search_controller.dart';
+import 'package:movie_app_flutter/views/movie_page.dart';
 
 class MovieCard extends StatefulWidget {
   const MovieCard({Key? key}) : super(key: key);

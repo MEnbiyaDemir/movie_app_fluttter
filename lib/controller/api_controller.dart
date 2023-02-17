@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 import 'package:get/get.dart';
-import 'package:movieapi_flutter/models/playing_model.dart';
+import 'package:movie_app_flutter/models/playing_model.dart';
 
 class Controller extends GetxController {
   var playingList = <Playing>[].obs;

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:movieapi_flutter/views/home_page.dart';
-import 'package:movieapi_flutter/views/movie_page.dart';
-import 'package:movieapi_flutter/views/profile_page.dart';
-import 'package:movieapi_flutter/views/search_page.dart';
+import 'package:movie_app_flutter/views/home_page.dart';
+import 'package:movie_app_flutter/views/movie_page.dart';
+import 'package:movie_app_flutter/views/profile_page.dart';
+import 'package:movie_app_flutter/views/search_page.dart';
 
 class BottomBar extends StatefulWidget {
   const BottomBar({Key? key}) : super(key: key);
