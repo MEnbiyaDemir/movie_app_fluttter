@@ -1,6 +1,7 @@
 Flutter project for Movie Tracking.
 
-project has these features
+Project has these features:
+
 State management library (getx)
 User Login via TMDB API
 Movie Searching, New Movies, Toprated Movies list etc.
