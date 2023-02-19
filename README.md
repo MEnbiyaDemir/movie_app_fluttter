@@ -1,13 +1,14 @@
-Flutter project for Movie Tracking.
-
-Project has these features:
+Flutter project for Movie Tracking. Project has these features:
 
 State management library (getx)
+
 User Login via TMDB API
+
 Movie Searching, New Movies, Toprated Movies list etc.
+
 Movie page that show movie's details.
+
 Inspecting your Profile and your favorite movies.
-Adding movies to Profile as Favorites.
 
 
 ![image](https://user-images.githubusercontent.com/73945604/219960534-be137291-eb06-41f8-8917-489eab739cc4.png)
