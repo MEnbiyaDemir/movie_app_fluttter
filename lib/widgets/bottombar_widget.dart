@@ -1,5 +1,8 @@
+import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:movie_app_flutter/controller/login_controller.dart';
+import 'package:movie_app_flutter/controller/navigation_controller.dart';
 import 'package:movie_app_flutter/views/home_page.dart';
 import 'package:movie_app_flutter/views/movie_page.dart';
 import 'package:movie_app_flutter/views/profile_page.dart';
@@ -13,42 +16,38 @@ class BottomBar extends StatefulWidget {
 }
 
 class _BottomBarState extends State<BottomBar> {
-  int _index = 0;
-
+  final NavigationController _navigationController =
+      Get.put(NavigationController());
+  final LoginController _loginController = Get.put(LoginController());
   gotonext() {
     Get.to(HomePage());
   }
 
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(
-        onTap: (value) {
-          if (value == 0) Get.to(HomePage());
-          if (value == 1) Get.to(SearchPage());
-          if (value == 2) Get.to(ProfilePage());
-        },
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        backgroundColor: Colors.blueGrey,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home, color: Colors.white),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.search,
-              color: Colors.white,
-            ),
-            label: 'Search',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.person,
-              color: Colors.white,
-            ),
-            label: 'Profile',
-          )
-        ]);
+    return CurvedNavigationBar(
+      backgroundColor: Colors.blueGrey,
+      onTap: (value) {
+        if (value == 0) _navigationController.navindex = 0;
+        if (value == 1) _navigationController.navindex = 1;
+        if (value == 2) _navigationController.navindex = 2;
+        if (value == 2 && _loginController.sessionId == null)
+          _navigationController.navindex = 3;
+      },
+      items: <Widget>[
+        Icon(
+          Icons.home,
+          size: 30,
+        ),
+        Icon(
+          Icons.search,
+          size: 30,
+        ),
+        Icon(
+          Icons.person,
+          size: 30,
+        )
+      ],
+    );
   }
 }

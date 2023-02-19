@@ -13,11 +13,15 @@ class MovieCard extends StatefulWidget {
 class _MovieCardState extends State<MovieCard> {
   final SearchController _searchController = Get.put(SearchController());
 
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () => Get.to(MoviePage()),
       child: Card(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(50),
+        ),
         child: Row(
           children: [
             SizedBox(

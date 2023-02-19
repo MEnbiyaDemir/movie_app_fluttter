@@ -20,14 +20,14 @@ class ReqToken {
   String requestToken;
 
   factory ReqToken.fromJson(Map<String, dynamic> json) => ReqToken(
-    success: json["success"],
-    expiresAt: json["expires_at"],
-    requestToken: json["request_token"],
-  );
+        success: json["success"],
+        expiresAt: json["expires_at"],
+        requestToken: json["request_token"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "success": success,
-    "expires_at": expiresAt,
-    "request_token": requestToken,
-  };
+        "success": success,
+        "expires_at": expiresAt,
+        "request_token": requestToken,
+      };
 }

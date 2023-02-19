@@ -14,6 +14,7 @@ class SearchPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black12,
       appBar: AppBar(
         automaticallyImplyLeading: false,
         backgroundColor: Colors.blueGrey,
@@ -24,7 +25,7 @@ class SearchPage extends StatelessWidget {
           children: [SearchList()],
         ),
       ),
-      bottomNavigationBar: BottomBar(),
+      //bottomNavigationBar: BottomBar(),
     );
   }
 }

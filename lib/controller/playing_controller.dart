@@ -4,9 +4,12 @@ import 'package:http/http.dart' as http;
 import 'package:get/get.dart';
 import 'package:movie_app_flutter/models/playing_model.dart';
 
+import 'api_info.dart';
+
 class Controller extends GetxController {
   var playingList = <Playing>[].obs;
   var isLoading = true.obs;
+  final apiInfo = ApiInfo();
 
   @override
   void onInit() {
@@ -16,7 +19,7 @@ class Controller extends GetxController {
 
   Future<void> fetchPlayingData() async {
     final response = await http.get(Uri.parse(
-        'https://api.themoviedb.org/3/movie/now_playing?api_key=c6bd8982f6e8aaa3c24cef0599a47755&language=en-US&page=1'));
+        'https://api.themoviedb.org/3/movie/now_playing?api_key=${apiInfo.api_key}&language=en-US&page=1'));
 
     if (response.statusCode == 200) {
       Playing _playing = Playing.fromJson(jsonDecode(response.body));

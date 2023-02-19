@@ -1,11 +1,11 @@
-
 // To parse this JSON data, do
 //
 //     final profileModel = profileModelFromJson(jsonString);
 
 import 'dart:convert';
 
-ProfileModel profileModelFromJson(String str) => ProfileModel.fromJson(json.decode(str));
+ProfileModel profileModelFromJson(String str) =>
+    ProfileModel.fromJson(json.decode(str));
 
 String profileModelToJson(ProfileModel data) => json.encode(data.toJson());
 
@@ -29,24 +29,24 @@ class ProfileModel {
   String username;
 
   factory ProfileModel.fromJson(Map<String, dynamic> json) => ProfileModel(
-    avatar: Avatar.fromJson(json["avatar"]),
-    id: json["id"],
-    iso6391: json["iso_639_1"],
-    iso31661: json["iso_3166_1"],
-    name: json["name"],
-    includeAdult: json["include_adult"],
-    username: json["username"],
-  );
+        avatar: Avatar.fromJson(json["avatar"]),
+        id: json["id"],
+        iso6391: json["iso_639_1"],
+        iso31661: json["iso_3166_1"],
+        name: json["name"],
+        includeAdult: json["include_adult"],
+        username: json["username"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "avatar": avatar.toJson(),
-    "id": id,
-    "iso_639_1": iso6391,
-    "iso_3166_1": iso31661,
-    "name": name,
-    "include_adult": includeAdult,
-    "username": username,
-  };
+        "avatar": avatar.toJson(),
+        "id": id,
+        "iso_639_1": iso6391,
+        "iso_3166_1": iso31661,
+        "name": name,
+        "include_adult": includeAdult,
+        "username": username,
+      };
 }
 
 class Avatar {
@@ -59,14 +59,14 @@ class Avatar {
   Tmdb tmdb;
 
   factory Avatar.fromJson(Map<String, dynamic> json) => Avatar(
-    gravatar: Gravatar.fromJson(json["gravatar"]),
-    tmdb: Tmdb.fromJson(json["tmdb"]),
-  );
+        gravatar: Gravatar.fromJson(json["gravatar"]),
+        tmdb: Tmdb.fromJson(json["tmdb"]),
+      );
 
   Map<String, dynamic> toJson() => {
-    "gravatar": gravatar.toJson(),
-    "tmdb": tmdb.toJson(),
-  };
+        "gravatar": gravatar.toJson(),
+        "tmdb": tmdb.toJson(),
+      };
 }
 
 class Gravatar {
@@ -77,12 +77,12 @@ class Gravatar {
   String? hash;
 
   factory Gravatar.fromJson(Map<String, dynamic> json) => Gravatar(
-    hash: json["hash"],
-  );
+        hash: json["hash"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "hash": hash,
-  };
+        "hash": hash,
+      };
 }
 
 class Tmdb {
@@ -93,10 +93,10 @@ class Tmdb {
   String? avatarPath;
 
   factory Tmdb.fromJson(Map<String, dynamic> json) => Tmdb(
-    avatarPath: json["avatar_path"],
-  );
+        avatarPath: json["avatar_path"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "avatar_path": avatarPath,
-  };
+        "avatar_path": avatarPath,
+      };
 }

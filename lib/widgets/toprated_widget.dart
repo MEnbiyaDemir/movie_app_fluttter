@@ -27,28 +27,39 @@ class _TopRatedState extends State<TopRated> {
                   padding: EdgeInsets.all(8),
                   itemCount: _tcontroller.playingList[0].results.length,
                   itemBuilder: (context, index) {
-                    return Card(
-                      child: Column(children: [
-                        Image.network('https://image.tmdb.org/t/p/w185' +
-                            '${_tcontroller.playingList[0].results[index].posterPath}'),
-                        Text(
-                            '${_tcontroller.playingList[0].results[index].title}'),
-                        Text(
-                            '${_tcontroller.playingList[0].results[index].voteAverage}'),
-                        Text(
-                            '${_tcontroller.playingList[0].results[index].releaseDate}'
-                                .substring(0, 10))
-                      ]),
+                    return SizedBox(
+                      width: 215,
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50),
+                        ),
+                        child: Column(children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(50.0),
+                            child: Image.network(
+                              'https://image.tmdb.org/t/p/w185' +
+                                  '${_tcontroller.playingList[0].results[index].posterPath}',
+                              scale: 0.9,
+                            ),
+                          ),
+                          Text(
+                              '${_tcontroller.playingList[0].results[index].title}'),
+                          Text(
+                              '${_tcontroller.playingList[0].results[index].voteAverage}'),
+                          Text(
+                              '${_tcontroller.playingList[0].results[index].releaseDate}'
+                                  .substring(0, 10))
+                        ]),
+                      ),
                     );
                   },
                 );
               } else {
                 return SizedBox(
                   width: 220,
-                  child: CircularProgressIndicator(),
+                  child: Center(child: CircularProgressIndicator()),
                 );
               }
-            })
-    );
+            }));
   }
 }

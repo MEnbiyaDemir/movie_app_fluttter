@@ -47,7 +47,7 @@ class MoviePage extends StatelessWidget {
           )
         ],
       ),
-      bottomNavigationBar: BottomBar(),
+      // bottomNavigationBar: BottomBar(),
     );
   }
 }

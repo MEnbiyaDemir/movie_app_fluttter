@@ -3,10 +3,12 @@ import 'package:http/http.dart' as http;
 import 'package:get/get.dart';
 
 import '../models/upcoming_model.dart';
+import 'api_info.dart';
 
 class UpcomingController extends GetxController {
   var playingList = <Upcoming>[].obs;
   var isLoading = true.obs;
+  final apiinfo = ApiInfo();
 
   @override
   void onInit() {
@@ -16,7 +18,7 @@ class UpcomingController extends GetxController {
 
   Future<void> fetchUpcomingData() async {
     final response = await http.get(Uri.parse(
-        'https://api.themoviedb.org/3/movie/upcoming?api_key=c6bd8982f6e8aaa3c24cef0599a47755&language=en-US&page=1'));
+        'https://api.themoviedb.org/3/movie/upcoming?api_key=${apiinfo.api_key}&language=en-US&page=1'));
 
     if (response.statusCode == 200) {
       Upcoming _playing = Upcoming.fromJson(jsonDecode(response.body));

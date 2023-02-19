@@ -5,8 +5,8 @@ import 'package:movie_app_flutter/widgets/moviecard_widget.dart';
 import 'package:get/get.dart';
 import 'package:movie_app_flutter/widgets/profilelist_widget.dart';
 
-class ProfilePage extends StatelessWidget {
-  const ProfilePage({Key? key}) : super(key: key);
+class GuestPage extends StatelessWidget {
+  const GuestPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     ProfileController _profileController = Get.put(ProfileController());
@@ -47,14 +47,14 @@ class ProfilePage extends StatelessWidget {
                           child: CircleAvatar(
                             radius: 50.0,
                             backgroundImage: NetworkImage(
-                                'https://www.themoviedb.org/t/p/w150_and_h150_face${_profileController.playingList[0].avatar.tmdb.avatarPath}'),
+                                'https://www.shutterstock.com/image-vector/guest-linear-icon-modern-outline-260nw-1230373900.jpg'),
                           ),
                         ),
                         SizedBox(
                           height: 10,
                         ),
                         Text(
-                          '${_profileController.playingList[0].username}',
+                          'Guest',
                           style: TextStyle(
                             fontSize: 35,
                             fontWeight: FontWeight.bold,
@@ -76,7 +76,6 @@ class ProfilePage extends StatelessWidget {
                   fontSize: 35,
                   fontWeight: FontWeight.bold,
                   color: Colors.black38)),
-          ProfileList(),
         ],
       ),
       // bottomNavigationBar: BottomBar(),

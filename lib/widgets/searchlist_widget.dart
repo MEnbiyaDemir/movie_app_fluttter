@@ -31,7 +31,8 @@ class _SearchListState extends State<SearchList> {
             onChanged: (text) {
               setState(() {
                 _searchController.playingList.clear();
-                _searchController.url2 = _searchController.textController.text;
+                _searchController.search =
+                    _searchController.textController.text;
                 _searchController.fetchSearchData();
               });
             },
@@ -53,7 +54,7 @@ class _SearchListState extends State<SearchList> {
                     reverse: true,
                     scrollDirection: Axis.vertical,
                     padding: EdgeInsets.all(8),
-                    itemCount: 6,
+                    itemCount: _searchController.playingList[0].results.length,
                     itemBuilder: (context, index) {
                       _searchController.index = index;
                       return MovieCard();
@@ -63,7 +64,7 @@ class _SearchListState extends State<SearchList> {
               } else {
                 return SizedBox(
                   width: 220,
-                  child: CircularProgressIndicator(),
+                  child: Center(child: CircularProgressIndicator()),
                 );
               }
             }),

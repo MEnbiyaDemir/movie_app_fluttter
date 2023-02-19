@@ -4,7 +4,8 @@
 
 import 'dart:convert';
 
-LoginModel loginModelFromJson(String str) => LoginModel.fromJson(json.decode(str));
+LoginModel loginModelFromJson(String str) =>
+    LoginModel.fromJson(json.decode(str));
 
 String loginModelToJson(LoginModel data) => json.encode(data.toJson());
 
@@ -24,18 +25,18 @@ class LoginModel {
   String? sessionId;
 
   factory LoginModel.fromJson(Map<String, dynamic> json) => LoginModel(
-    success: json["success"],
-    failure: json["failure"],
-    statusCode: json["status_code"],
-    statusMessage: json["status_message"],
-    sessionId: json["session_id"],
-  );
+        success: json["success"],
+        failure: json["failure"],
+        statusCode: json["status_code"],
+        statusMessage: json["status_message"],
+        sessionId: json["session_id"],
+      );
 
   Map<String, dynamic> toJson() => {
-    "success": success,
-    "failure": failure,
-    "status_code": statusCode,
-    "status_message": statusMessage,
-    "session_id": sessionId,
-  };
+        "success": success,
+        "failure": failure,
+        "status_code": statusCode,
+        "status_message": statusMessage,
+        "session_id": sessionId,
+      };
 }
