@@ -1,17 +1,18 @@
-# movieapi_flutter
+Flutter project for Movie Tracking.
 
-A new Flutter project.
+State management library (getx)
+User Login via TMDB API
+Movie Searching, New Movies, Toprated Movies list etc.
+Movie page that show movie's details.
+Inspecting your Profile and your favorite movies.
+Adding movies to Profile as Favorites.
 
-## Getting Started
+![image](https://user-images.githubusercontent.com/73945604/219960562-6a2e8d71-9432-4692-b1d2-ea192e9d6b81.png)
 
-This project is a starting point for a Flutter application.
+![image](https://user-images.githubusercontent.com/73945604/219960607-92fb07e0-5c2a-4ac1-96f4-d377c760e579.png)
 
-A few resources to get you started if this is your first Flutter project:
+![image](https://user-images.githubusercontent.com/73945604/219960578-4fbbf18a-eaed-46d4-b596-67e731e2e154.png)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+![image](https://user-images.githubusercontent.com/73945604/219960534-be137291-eb06-41f8-8917-489eab739cc4.png)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-"# movie_app_fluttter" 
+![image](https://user-images.githubusercontent.com/73945604/219960488-ea222f76-f9ae-4004-aaa8-868806b19d19.png)
