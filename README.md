@@ -1,4 +1,4 @@
-Flutter project for Movie Tracking. Project has these features:
+# Flutter project for Movie Tracking. Project has these features:
 
 State management library (getx)
 
