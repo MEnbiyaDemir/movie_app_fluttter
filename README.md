@@ -10,6 +10,7 @@ Movie page that show movie's details.
 
 Inspecting your Profile and your favorite movies.
 
+note: i know there is no responsible user interface.
 
 ![image](https://user-images.githubusercontent.com/73945604/219960534-be137291-eb06-41f8-8917-489eab739cc4.png)
 
